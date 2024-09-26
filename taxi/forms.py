@@ -22,7 +22,8 @@ def validator_license_number(value: str):
         str: The valid license number if all conditions are met.
 
     Raises:
-        ValidationError: If the license number does not match the required format.
+        ValidationError: If the license number does not
+         match the required format.
     """
     valid_length = 8
     license_number = value
