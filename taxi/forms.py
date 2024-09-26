@@ -7,6 +7,23 @@ from taxi.models import Driver, Car
 
 
 def validator_license_number(value: str):
+    """
+    Validates a driver's license number.
+
+    The license number must follow these rules:
+    - It must be exactly 8 characters long.
+    - The first 3 characters must be uppercase letters.
+    - The last 5 characters must be digits.
+
+    Args:
+        value (str): The license number to validate.
+
+    Returns:
+        str: The valid license number if all conditions are met.
+
+    Raises:
+        ValidationError: If the license number does not match the required format.
+    """
     valid_length = 8
     license_number = value
     valid_chars = all(
